@@ -1,0 +1,76 @@
+@import url(http://fonts.googleapis.com/css?family=Nunito:300,400,700);
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,svg {
+	display: block
+}
+
+
+body{
+	background-color: #fff;
+	color: #111;
+	font-size: 100%;
+	font-family: Nunito, Arial, sans-serif;
+	font-weight: 300;
+	padding:10px 2% 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-weight: 400;
+	margin:0;
+}
+h1{
+	margin-bottom: 0.5em;
+}
+
+a{
+	color: #b50024;
+	text-decoration: underline;
+}
+	a:visited{
+		color:#942234
+	}
+	a:hover, a:focus{
+		text-decoration: none;
+	}
+
+#container{
+	max-width:11s00px;
+	margin:0 auto;
+}
+
+#content, #sidebar{
+	/* border-top:3px solid #a09fa1 */
+}
+#content{
+	width:65%;
+	margin-right:4%;
+	float:left;
+}
+
+#sidebar{
+	width:30%;
+	float:right;
+}
+
+	#sidebar ul{
+		list-style:none;
+		padding: 0;
+	}
+	#sidebar ul a{
+		display: block;
+		background-color: #f3f3f3;
+		padding: 5px 2%;
+		margin-bottom:1px;
+		text-decoration: none;	
+	}
+	#sidebar ul a:hover, #sidebar ul a:focus{
+		background-color: #dedee3
+	}
+
+	#sidebar aside{
+		margin:0 2%;
+		font-size:0.8em;
+	}
+
+
+

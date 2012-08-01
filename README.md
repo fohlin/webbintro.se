@@ -10,3 +10,6 @@ course [Introduction to Web Development][DA156A] at [Malmö University][Mah].
 # License #
 
 Not decided yey, liberal.
+
+The project includes [html5shiv](http://code.google.com/p/html5shiv/)
+(`site/js/html5shiv.js`), which is MIT licensed.
