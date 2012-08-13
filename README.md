@@ -20,3 +20,5 @@ Not decided yet, liberal.
 
 The project includes [html5shiv](http://code.google.com/p/html5shiv/)
 (`site/js/html5shiv.js`), which is MIT licensed.
+
+test
