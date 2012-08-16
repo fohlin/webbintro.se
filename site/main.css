@@ -79,16 +79,38 @@ code{
 	#sidebar ul a:hover, #sidebar ul a:focus{
 		background-color: #dedee3
 	}
-
-	#sidebar aside{
-/* 		margin:0 2%; */
-		font-size:0.8em;
-	}
 	
 	#sidebar nav h3{
 		margin-top: 0.3333em;
 	}
 
+aside, footer{
+	font-size:0.8em;
+}
+footer{
+	clear:both;
+	padding-top:1em;
+}
+	footer > p{
+		width:30%;
+		margin-right:5%;
+		float:left;
+	}
+	footer > p:last-child{
+		margin-right: 0;
+	}
+	footer hr{
+		border-color: #ddd;
+		margin-bottom: 1em;
+	}
+
+footer:after{
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
 
 table{
 	width: 100%;
@@ -106,6 +128,11 @@ th[scope="col"]{
 		width:100%;
 		float:none;
 		margin:0 0 1.5em;
+	}
+	footer > p{
+		width: 100%;
+		float: none;
+		margin-right: 0;
 	}
 }
 
