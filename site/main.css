@@ -25,6 +25,9 @@ h1{
 p,ul,ol{
 	margin:0 0 1em;
 }
+table{
+	margin-bottom: 1.5em;
+}
 
 a{
 	color: #b50024;
@@ -63,12 +66,16 @@ code{
 	margin-bottom:0.5em;
 }
 
+.slides p{
+	text-align: center;
+}
+
 #sidebar{
 	width:30%;
 	float:right;
 }
 	#sidebar h3{
-		margin-bottom: 0.8rem;
+		margin-bottom: 0.8em;
 	}
 	#sidebar ul{
 		list-style:none;
