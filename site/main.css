@@ -17,6 +17,7 @@ body{
 h1,h2,h3,h4,h5,h6{
 	font-weight: 400;
 	margin:0 0 0.6em 0;
+	clear:both;
 }
 h1{
 	margin-bottom: 1em;
@@ -56,6 +57,10 @@ code{
 	width:65%;
 	margin-right:4%;
 	float:left;
+}
+
+#content li{
+	margin-bottom:0.5em;
 }
 
 #sidebar{
@@ -122,6 +127,12 @@ th[scope="col"]{
 	border-bottom: 1px #ccc solid;
 }
 
+.col{
+	width:48%;
+	margin-right:2%;
+	float: left;
+}
+
 
 @media screen and (max-width:640px){
 	#content, #sidebar{
@@ -129,7 +140,7 @@ th[scope="col"]{
 		float:none;
 		margin:0 0 1.5em;
 	}
-	footer > p{
+	footer > p, .col{
 		width: 100%;
 		float: none;
 		margin-right: 0;
