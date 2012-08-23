@@ -11,6 +11,7 @@ body{
 	font-size: 100%;
 	font-family: Nunito, Arial, sans-serif;
 	font-weight: 300;
+	line-height: 1.4;
 	padding:10px 2% 1em;
 }
 
@@ -47,6 +48,11 @@ hr{
 code{
 	font-family: monospace;
 }
+pre{
+	font-size:1em;
+	padding:10px;
+	border:1px solid #666;
+}
 
 #container{
 	max-width:1100px;
@@ -62,8 +68,25 @@ code{
 	float:left;
 }
 
+#content h2, #content h3{
+	margin-top:1.5em;
+}
+#content h2:first-child{
+	margin-top:0;
+}
+
 #content li{
 	margin-bottom:0.5em;
+}
+
+#content img{
+	max-width: 100%; /* quick fix */
+}
+
+.extra{
+	background-color:#ffe;
+	border:1px dashed rgb(179,179,179);
+	padding:1em 1em 0;
 }
 
 .slides p{
