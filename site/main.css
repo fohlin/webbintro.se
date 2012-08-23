@@ -83,6 +83,7 @@ pre{
 	max-width: 100%; /* quick fix */
 }
 
+
 .extra{
 	background-color:#ffe;
 	border:1px dashed rgb(179,179,179);
@@ -156,6 +157,44 @@ th{
 th[scope="col"]{
 	border-bottom: 1px #ccc solid;
 }
+
+#plan{
+	border-spacing:0;
+	border-collapse:collapse;
+}
+	#plan th:first-child{
+		text-align: center;
+	}
+	.week-odd{
+		background-color:#f0f0f0;
+	}
+	/* Target first col without adding extra class */
+	#plan td[rowspan]{
+		text-align:center;
+		font-weight:bold;
+		font-size: 1em;
+	}
+	#plan td:last-child{
+		width:65%;
+	}
+	.lab td:last-child{
+		font-size: 0.875em;
+	}
+	.assignment td{
+		font-size: 0.75em;
+	}
+	.exam td:last-child{
+		font-weight: bold;
+	}
+	.lecture td:last-child, .sem td:last-child{
+		border-right: 3px solid #c1f0b7;
+	}
+	.lab td:last-child{
+		border-right: 3px solid #bfcef0;
+	}
+	.deadline td:last-child, .exam td:last-child{
+		border-right: 3px solid #f04945;
+	}
 
 .col{
 	width:48%;
