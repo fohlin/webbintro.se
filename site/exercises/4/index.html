@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Laboration 4 - Introduktion till webbutveckling</title>
+	<link href="/main.css" rel="stylesheet" type="text/css" media="screen">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--[if lt IE 9]>
+	<script src="/js/html5shiv.js"></script>
+	<![endif]-->
+	
+	<!-- Syntax highlighting, since it was used before. http://shjs.sourceforge.net/ -->
+	<link rel="stylesheet" href="http://webshare.mah.se/ctfroh/da156a/h11/assets/sh_style.css" type="text/css">
+	<script type="text/javascript" src="http://webshare.mah.se/ctfroh/da156a/h11/assets/sh_main.min.js"></script>
+	<script type="text/javascript" src="http://webshare.mah.se/ctfroh/da156a/h11/assets/sh_html.min.js"></script>
+	<script type="text/javascript" src="http://webshare.mah.se/ctfroh/da156a/h11/assets/sh_javascript.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){ sh_highlightDocument();	}
+	</script>
+</head>
+<body>
+	<div id="container">
+		<h1>Introduktion till webbutveckling</h1>
+
+		<div id="sidebar">
+			<nav>
+				<h3>Navigera</h3>
+				<ul>
+					<li><a href="/">Om</a></li>
+					<li><a href="/resources/">Resurser</a></li>
+					<li><a href="/lectures/">Föreläsningar</a></li>
+					<li><a href="/exercises/">Laborationer</a></li>
+					<li><a href="/plan.html">Planering HT 2012</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div id="content">
+		<h2>Laboration 4: Interaktivitet med JavaScript</h2>
+			<p>
+				I denna laboration kommer du att utforska enkel händelsehantering med JavaScript,
+				med fokus på att dynamiskt uppdatera presentation.
+			</p>
+
+			<h3>Lärandemål</h3>
+			<p>Efter genomförd laboration ska du:</p>
+			<ul>
+				<li>
+					I JavaScript kunna använda <abbr title="Document Object Model">DOM</abbr> för att
+					hämta referenser till enstaka element på en webbsida.
+				</li>
+				<li>
+					Kunna hantera händelserna <code>click</code> och <code>load</code>
+					med egna JavaScript-funktioner.
+				</li>
+				<li>
+					Ha förståelse för hur stilmallar och JavaScript kan användas tillsammans.
+				</li>
+			</ul>
+
+			<h2 id="instruktioner">Instruktioner</h2>
+			<p>
+				Målet med laborationen är att producera en enkel webbsida som förbluffar användaren
+				med interaktiva stilförändringar. Eller, åtminstone, en webbsida som ser lite annorlunda
+				ut beroende på vilken knapp användaren klickar på. Nedan finner du en kort beskrivning
+				av resultatet.
+			</p>
+			<p class="focus">
+				<img src="i1.png" alt="Texten har webbläsarens standardutseende">
+			</p>
+			<p>
+				Webbsidan ska innehålla en kort text, vars faktiska budskap inte är viktigt.
+				Bilden ovan visar en synnerligen låg fantasinivå och använder den klassiska texten 
+				<a href="http://en.wikipedia.org/wiki/Lorem_ipsum">lorem ipsum</a>. Din text skulle
+				t ex kunna innehålla en beskrivning av webbsidan.
+			</p>
+			<p>
+				I anslutning till textområdet ska det finnas tre knappar, som användaren kan klicka
+				på för att byta utseende på texten. Målet är att var och en av knapparna ska resultera
+				i ett unikt utseende. Här är tre exempel:
+			</p>
+			<ul class="focus">
+				<li><img src="i2.png" alt="Texten har ett formellt utseende"></li>
+				<li><img src="i3.png" alt="Texten har ett roligt utseende med starka färger"></li>
+				<li><img src="i4.png" alt="Texten ser ut som en gammal datorterminal (grön text, svart bakgrund)"></li>
+			</ul>
+			<p>
+				Du är fri att välja utseende för de tre varianterna helt själv, bara de skiljer sig markant.
+			</p>
+
+
+			<h3>Genomförande</h3>
+			<p>
+				Att implementera denna funktionalitet kan göras i tre steg.
+			</p>
+			<ol>
+				<li>Skapa det underliggande HTML-dokumentet.</li>
+				<li>Skapa en stilmall med CSS-regler för respektive utseende.</li>
+				<li>Skapa ett JavaScript som gör det möjligt att byta utseende.</li>
+			</ol>
+
+			<h4>HTML-dokumentet</h4>
+			<p>
+				Det första steget bör inte ställa till med några problem. Att skapa textstycke och huvudrubrik
+				har du gjort många gånger; knapparna kan du skapa med taggen <code>button</code>.
+				Placera all text inom ett <code>div</code>-element med identiteten "message"
+				(resterande instruktioner kommer att utgå ifrån detta).
+			</p>
+
+			<h4>Stilmallen</h4>
+			<p>
+				Välj först om du vill ha en inbäddad eller extern stilmall (det senare rekommenderas).
+				Sedan kan du välja den grundstil som dokumentet ska ha. I exemplet ovan är den enda grundstilen
+				att <code>#message</code> ska ha en fast bredd på <code>400px</code>, samt ha lite marginal och padding.
+			</p>
+			<p>
+				Resten av innehållet i stilmallen bör vara de olika utseendena för textrutan. Detta görs lämpligtvis
+				genom tre olika klasser. I exemplet ovan är klasserna döpta till <code>formal</code>,
+				<code>happy</code> och <code>computer</code>. Med denna metod kan utseendet på textrutan bytas enkelt,
+				genom att ange en annan klass. Såhär kan källkoden ut se ut för det sista av exemplets utseende:
+			</p>
+<pre class="sh_html">
+&lt;div id=&quot;message&quot; class=&quot;computer&quot;&gt;
+	...
+&lt;/div&gt;
+</pre>
+			<p>
+				När du gjort de tre varianterna och kan byta utseende manuellt (genom att byta klass),
+				så är det dags att gör skriptet som bytar stil via knapparna.
+			</p>
+
+			<h4>Byta utseende med JavaScript</h4>
+			<p>
+				Målet är att bygga ett kort skript som bytar klass på textrutan (som därmed ändrar utseende).
+				Det ska vara ett externt JavaScript, så börja med att skapa en ny fil som du sparar med filändelsen
+				<code>.js</code> i samma mapp. Inkludera JavaScript-filen genom taggen <code>script</code>, som på
+				tidigare laborationer.
+			</p>
+			<p>
+				Börja med att skapa funktionen <code>setUp</code>, som köras när webbsidan laddats klart. Till
+				slut ska funktionen se till att saker och ting händer när knapparna klickas, men först så kan den
+				göra en enkel utskrift, så att du ser att den fungerar.
+			</p>
+<pre class="sh_javascript">
+function setUp() {
+	alert(&quot;Nu har sidan laddats&quot;);
+}
+</pre>
+			<p>
+				För att se till att funktionen faktiskt körs vid sidladdning, kan den speciella variabeln
+				<code>window</code> användas - specifikt ska händelsen <code>onload</code> ställas in.
+			</p>
+<pre class="sh_javascript">
+// Funktionen setUp ska köras vid sidladdning:
+window.onload = setUp;
+</pre>
+			<p>
+				När du kommit såhär långt bör du säkerställa att alert-rutan faktiskt kommer upp
+				när sidan laddats klart.
+			</p>
+			<p>
+				Du behöver nu tre stycken funktioner - de som faktiskt ska se till att utseendet (klassen)
+				kan bytas. Den generella mallen för funktionerna kan sammanfattas som:
+			</p>
+			<ol>
+				<li>Hämta en referens till textrutan (via identiteten <code>message</code>).</li>
+				<li>Ändra attributet/egenskapen <code>className</code> till önskat klassnamn.</li>
+				<li>Det finns inget steg 3.</li>
+			</ol>
+<pre class="sh_javascript">
+// Ändrar textrutans klass till 'formal'
+function setFormalStyle(){
+	var messageBox = document.getElementById(&quot;message&quot;);
+	messageBox.className = &quot;formal&quot;;
+}
+</pre>
+			<p>
+				Ovan ser du ett exempel på en sådan funktion. Du får själv skapa de två andra efter samma mall
+				(tänk på att använda dina egna klassnamn överallt).
+			</p>
+			<p>
+				Till sist måste du se till att klassbytarfunktionerna faktiskt körs när man klickar på knapparna.
+				Det ska göras innuti <code>setUp</code> (istället för alert-rutan). Du gör det separat för varje knapp,
+				genom att hämta först hämta en referens till knappen och sedan ändra attributet <code>onclick</code>.
+				Om du ger knapparna vars en identitet (t ex med samma namn som du kallar motsvarande utseende)
+				så blir det enkelt att hämta knappreferenser.
+			</p>
+<pre class="sh_javascript">
+// En knapp antas ha identiteten &#x27;formal&#x27;
+document.getElementById(&quot;formal&quot;).onclick = setFormalStyle;
+</pre>
+			<p>
+				När du lyckats se till att knapparna fungerar som de ska, så har du också lyckats med laborationen.
+			</p>
+
+			<h3>Frivillig, men rekommenderad förbättring</h3>
+			<p>
+				Du kanske tycker att det verkar lite onödigt med tre nästan identiska funktioner?
+				Som med de flesta programmeringsproblem så går det att skapa mer eller mindre eleganta lösningar.
+				Det vore elegant att kunna använda samma funktion till alla knapparna.
+			</p>
+			<p>
+				Anledningen att ha separata funktioner är att klassnamnet ska vara olika för knapparna - i övrigt
+				är de identiska. Men det är också möjligt att i en funktion lista ut vilken knapp som klickats på,
+				och utifrån detta välja rätt klass. En variant att göra detta lyder:
+			</p>
+			<ul>
+				<li>
+					Ge knapparna samma identitet som den resulterande klassen ska bli (att klick på knappen med id
+					<code>formal</code> ska ge textrutan klassen <code>formal</code>).
+				</li>
+				<li>
+					I JavaScript-funktionen kan en referens till det klickade elementet hämtas med hjälp av
+					den speciella variabeln <code>this</code>. Från denna kan namnet på id-attributet läsas av.
+				</li>
+				<li>
+					Namnet på id-attributet kan sedan tilldelas som klassnamn till textrutan, med samma metod
+					som tidigare visats.
+				</li>
+			</ul>
+			<p>
+				Nedanstående funktion visar detta. Byta så att denna funktion körs vid klick för alla tre
+				av knapparna.
+			</p>
+<pre class="sh_javascript">
+function setStyle() {
+	// this &auml;r en referens till det element som aktiverade funktionen
+	//   (som klickades p&aring;)
+	var styleName = this.id;
+	// Textrutans klassnamn blir samma som knappens id:
+	document.getElementById(&quot;message&quot;).className = styleName;
+}
+</pre>
+
+			<h2 id="feedback">Feedback</h2>
+			<p>
+				Som vanligt, se till att HTML och CSS validerar - och hör med labbhandledare och kursare angående
+				kvalitet för din JavaScript-kod. 
+			</p>		
+		</div>
+
+ 		<footer>
+ 			<hr>
+ 			<p>
+ 				Användning av allt material är fritt, om motsatsen inte anges. Länka gärna!
+ 				Formellt utrycks detta med licensen <a rel="license" href="http://creativecommons.org/licenses/by/2.5/se/">Creative Commons Erkännande 2.5 Sverige</a>.
+ 				<br>
+ 			</p>
+
+ 			<p>
+ 				Detta projekt är <a href="https://github.com/fohlin/webbintro.se">publicerat som öppen källkod</a>.
+ 				Du kan ladda hem webbplatsen i sin helhet, och får gärna föreslå ändringar och
+ 				bidra med förbättringar.
+ 			</p>
+
+ 			<p>
+ 				Webbplatsen drivs av
+ 				<a href="http://fredrikohlin.com/" rel="author">Fredrik&nbsp;Ohlin</a>
+ 				och
+ 				<a href="http://tibbelit.se/" rel="author">Anton&nbsp;Tibblin</a>,
+ 				som också ansvarar för kursen med samma namn, vid programmet
+ 				<a href="http://edu.mah.se/sv/Program/TGINA">Informationsarkitekt</a>,
+ 				<a href="http://mah.se/">Malmö högskola</a>.
+ 			</p>
+ 		</footer>
+	</div>
+</body>
+</html>
