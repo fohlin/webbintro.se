@@ -140,6 +140,10 @@ th[scope="col"]{
 	float: left;
 }
 
+.todo{
+	background-color:#9bff00;
+}
+
 
 @media screen and (max-width:640px){
 	#content, #sidebar{
