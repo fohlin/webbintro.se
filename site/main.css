@@ -206,6 +206,14 @@ th[scope="col"]{
 	background-color:#9bff00;
 }
 
+.focus {
+	text-align:center;
+}
+ul.focus{
+	list-style:none;
+	padding-left:0;
+}
+
 
 @media screen and (max-width:640px){
 	#content, #sidebar{
