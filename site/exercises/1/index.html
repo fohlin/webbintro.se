@@ -74,7 +74,7 @@
 			<li><p>Ett bra textredigeringsprogram. Med &#8220;bra&#8221; menas framförallt att programmet stödjer <a href="http://en.wikipedia.org/wiki/Syntax_highlighting">syntaxmarkering</a> för HTML - därutöver finns en mängd andra personliga preferenser.</p>
 
 			<ul><li>För Windows så medföljer Notepad (Anteckningar), för Mac OS X medföljer TextEdit (Textredigerare). Dessa är inte jättebra.</li>
-			<li class="todo">På datorerna i Kranen och Ubåtshallen rekommenderas EditPlus eller Web Notepad.</li>
+			<li class="todo">På datorerna i Kranen och Ubåtshallen rekommenderas Notepad++.</li>
 			<li>För nedladdning till din egen dator finns otaliga alternativ. Några gratisvarianter är:
 			<ul><li><a href="http://notepad-plus-plus.org/">Notepad++</a> (Windows)</li>
 			<li><a href="http://www.flos-freeware.ch/notepad2.html">Notepad2</a> (Windows)</li>
@@ -90,21 +90,38 @@
 
 			<p><em>Har du gjort första labben i kursen Introduktion till datavetenskap? Då känner du nog igen nedanstående steg.</em></p>
 
-			<p>Du kanske har noterat att det finns mapp som heter <code>public_html</code> i din hemkatalog. Detta är en speciell mapp, då alla filer som läggs där i automatiskt blir tillgängliga över Internet. Om du redan provat att publicera filer via Homeweb kan du hoppa till nästa rubrik. Annars bör du gå igenom följande steg för att testa på webbpublicering via Homeweb:</p>
+			<p>Du kanske har noterat att det finns nätverksplats som heter <code>Webshare</code> (L:\) när du öppnar "Den här datorn" (om platsen inte finns måste du aktivera tjänsten Webshare <a href="http://idservice.mah.se">här</a>). Detta är en speciell plats, då alla filer som läggs där i automatiskt blir tillgängliga över Internet. Om du redan provat att publicera filer via Webshare kan du hoppa till nästa rubrik. Annars bör du gå igenom följande steg för att testa på webbpublicering via Webshare:</p>
 
 			<ol>
-			<li><p>En väldigt enkel webbsida är förberedd för er att använda. Högerklicka på <a href="studentfiler/index.html">denna länk</a> och välj &#8220;Spara som&#8221; (eller motsvarande). Spara filen i din <code>public_html</code>-mapp, med filnamnet <code>index.html</code>.</p>
-				<p class="todo">TODO: infoga text att manuellt kopiera istället.</p>
+			<li><p>En väldigt enkel webbsida är förberedd för er att använda. Källkoden för sidan är:
+				<code><pre>
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"&gt;
+		&lt;title&gt;Min Webshare&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1>Min Webshare&lt;/h1&gt;
+		&lt;p id="url">&lt;/p&gt;
+		&lt;script type="text/javascript"&gt;
+			document.getElementById("url").innerHTML =
+				"Du ansluter till denna HTML-fil genom adressen &lt;code&gt;" + window.location + "&lt;/code&gt;";
+		&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+				</pre></code>
+				Skapa ett nytt dokument i t.ex. Notepad++ och klistra in ovanstående kod i dokumentet. Spara filen i din <code>Webshare</code>-plats, med filnamnet <code>index.html</code>.</p>
 			</li>
-			<li><p>I introduktionen till Homeweb länkad ovan fick du veta vilken med webbadress (URL) man hittar till sin Homeweb. Använd din egen datoridentitet och surfa till <code>http://homeweb.mah.se/~datorid</code>. Du bör därefter se den väldigt enkla webbsida du sparade i föregående steg.</p></li>
-			<li><p>Om du får felet Forbidden så betyder det att ingen fil med namnet <code>index.html</code> (eller <code>index.htm</code>) hittas. Använd i så fall utforskaren för att kontrollera att filen från steg 1 är sparad i mappen <code>public_html</code>. Börja om från steg 1 om du inte hittar filen alls. Om filen finns, men har fel filnamn - använd utforskaren rätta till namnet.</p></li>
+			<li><p>För att nu surfa in till sidan som ni precis publicerade, surfar ni till <code>http://webshare.mah.se/datorid</code>, där datorid är din egen datoridentitet.</p></li>
+			<li><p>Om du får felet <code>403 - Forbidden: Access is denied.</code> så betyder det att ingen fil med namnet <code>index.html</code> (eller <code>index.htm</code>) hittas. Använd i så fall utforskaren för att kontrollera att filen från steg 1 är sparad i nätverksplatsen <code>Webshare</code>. Börja om från steg 1 om du inte hittar filen alls. Om filen finns, men har fel filnamn - använd utforskaren rätta till namnet.</p></li>
 			<li><p>Öppna den nysparade filen i ett textredigeringsprogram - det är dags att lägga till ditt eget innehåll.</p></li>
 			</ol>
 
 			<h4 id="andrametoderfrattkommathemkatalogen">Andra metoder för att komma åt hemkatalogen</h4>
 
 			<ul>
-			<li>På <a href="https://studentportal.mah.se/">studentportalen</a> kan du bläddra bland filerna via ett webbgränssnitt.</li>
 			<li>Hemkatalogen går även att komma åt via FTP. FTP är ett protokoll specialdesignat för att skicka och ta emot filer (därav namnet, File Transfer Protocol). <a href="http://www.mah.se/ITsupport/Program-och-tjanster/Hemkatalog/Na-hemkatalogen-hemifran/">Här finns instruktioner</a>, om än inte jättebra sådana, för hur det kan gå till.</li>
 			</ul>
 
