@@ -58,7 +58,7 @@
 			<ul>
 			<li>ha en förståelse för vad HTML-taggar är och hur de används för att bygga upp webbsidor.</li>
 			<li>känna till de vanligaste elementen i HTML och deras syfte.</li>
-			<li class="todo">veta vad HTML 4.01 Strict innebär samt hur man kontrollerar sin kod gentemot denna standard.</li>
+			<li>veta vad HTML5 innebär samt hur man kontrollerar sin kod gentemot denna standard.</li>
 			<li>ha publicerat en personlig webbsida som andra kan besöka!</li>
 			</ul>
 
@@ -74,7 +74,7 @@
 			<li><p>Ett bra textredigeringsprogram. Med &#8220;bra&#8221; menas framförallt att programmet stödjer <a href="http://en.wikipedia.org/wiki/Syntax_highlighting">syntaxmarkering</a> för HTML - därutöver finns en mängd andra personliga preferenser.</p>
 
 			<ul><li>För Windows så medföljer Notepad (Anteckningar), för Mac OS X medföljer TextEdit (Textredigerare). Dessa är inte jättebra.</li>
-			<li class="todo">På datorerna i Kranen och Ubåtshallen rekommenderas Notepad++.</li>
+			<li>På datorerna i Kranen och Ubåtshallen rekommenderas Notepad++.</li>
 			<li>För nedladdning till din egen dator finns otaliga alternativ. Några gratisvarianter är:
 			<ul><li><a href="http://notepad-plus-plus.org/">Notepad++</a> (Windows)</li>
 			<li><a href="http://www.flos-freeware.ch/notepad2.html">Notepad2</a> (Windows)</li>
@@ -86,7 +86,7 @@
 			<li>Sitepoint publicerar ett slags upppslagsverk för många aspekter kring HTML: <a href="http://reference.sitepoint.com/html">Sitepoint HTML Reference</a>.</li></ul></li>
 			</ul>
 
-			<h3 id="ettstartdokument" class="todo">1. Ett startdokument - TODO: Omskrivning för nya systemet</h3>
+			<h3 id="ettstartdokument">1. Ett startdokument</h3>
 
 			<p><em>Har du gjort första labben i kursen Introduktion till datavetenskap? Då känner du nog igen nedanstående steg.</em></p>
 
@@ -95,34 +95,44 @@
 			<ol>
 			<li><p>En väldigt enkel webbsida är förberedd för er att använda. Källkoden för sidan är:
 				<code><pre>
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 	&lt;head&gt;
-		&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"&gt;
+		&lt;meta charset="utf-8"&gt;
 		&lt;title&gt;Min Webshare&lt;/title&gt;
 	&lt;/head&gt;
 	&lt;body&gt;
-		&lt;h1>Min Webshare&lt;/h1&gt;
-		&lt;p id="url">&lt;/p&gt;
-		&lt;script type="text/javascript"&gt;
-			document.getElementById("url").innerHTML =
-				"Du ansluter till denna HTML-fil genom adressen &lt;code&gt;" + window.location + "&lt;/code&gt;";
-		&lt;/script&gt;
+		&lt;h1&gt;Min Webshare&lt;/h1&gt;
+		&lt;p&gt;
+			Denna webbsida ska strax fyllas
+			på med information.
+		&lt;/p&gt;
 	&lt;/body&gt;
 &lt;/html&gt;
-				</pre></code>
+</pre></code>
 				Skapa ett nytt dokument i t.ex. Notepad++ och klistra in ovanstående kod i dokumentet. Spara filen i din <code>Webshare</code>-plats, med filnamnet <code>index.html</code>.</p>
 			</li>
+			
 			<li><p>För att nu surfa in till sidan som ni precis publicerade, surfar ni till <code>http://webshare.mah.se/datorid</code>, där datorid är din egen datoridentitet.</p></li>
-			<li><p>Om du får felet <code>403 - Forbidden: Access is denied.</code> så betyder det att ingen fil med namnet <code>index.html</code> (eller <code>index.htm</code>) hittas. Använd i så fall utforskaren för att kontrollera att filen från steg 1 är sparad i nätverksplatsen <code>Webshare</code>. Börja om från steg 1 om du inte hittar filen alls. Om filen finns, men har fel filnamn - använd utforskaren rätta till namnet.</p></li>
-			<li><p>Öppna den nysparade filen i ett textredigeringsprogram - det är dags att lägga till ditt eget innehåll.</p></li>
+			
+			<li><p>Om du får felet <code>404 - File or directory not found.</code> så betyder det att ingen fil med namnet <code>index.html</code> (eller <code>index.htm</code>) hittas. Använd i så fall utforskaren för att kontrollera att filen från steg 1 är sparad i nätverksplatsen <code>Webshare</code>. Börja om från steg 1 om du inte hittar filen alls. Om filen finns, men har fel filnamn - använd utforskaren rätta till namnet.</p>
+				
+				<div class="extra" style="padding:5px; font-size:0.875em;">
+					Ser tecknet &quot;å&quot; konstigt ut när du öppnar webbsidan i webbläsaren? I så fall tolkas dokumentet på ett annat vis än det är sparat. Rekommenderad lösning: används &quot;spara som&quot; och ange Encoding/Teckenkodning till <code>UTF-8</code>. Mer om detta på föreläsningarna.
+				</div>
+			</li>
+			
+			<li><p>Öppna den nyss parade filen i ett textredigeringsprogram - det är dags att lägga till ditt eget innehåll.</p></li>
 			</ol>
+
 
 			<h4 id="andrametoderfrattkommathemkatalogen">Andra metoder för att komma åt hemkatalogen</h4>
 
 			<ul>
-			<li>Hemkatalogen går även att komma åt via FTP. FTP är ett protokoll specialdesignat för att skicka och ta emot filer (därav namnet, File Transfer Protocol). <a href="http://www.mah.se/ITsupport/Program-och-tjanster/Hemkatalog/Na-hemkatalogen-hemifran/">Här finns instruktioner</a>, om än inte jättebra sådana, för hur det kan gå till.</li>
+			<li>Hemkatalogen går även att komma åt via krypterad FTP. FTP är ett protokoll specialdesignat för att skicka och ta emot filer (därav namnet, File Transfer Protocol). Adressen är <code>ftpes://webshare.mah.se</code> och ditt vanliga datorid och lösenord används. <a href="http://filezilla-project.org/">FileZilla</a> (finns i datorsalarna) och <a href="http://cyberduck.ch/">Cyberduck</a> är två bra program som kan användas.</li>
+			<li>
+				Det finns även <a href="http://www.mah.se/ITsupport/Program-och-tjanster/Hemkatalog/Na-hemkatalogen-hemifran/">ett webbgränssnitt</a>.
+			</li>
 			</ul>
 
 			<h3 id="merinnehllmerhtml">2. Mer innehåll, mer HTML</h3>
@@ -185,7 +195,7 @@
 
 			<h3 id="valideradinkod">3. Validera din kod</h3>
 
-			<p>Det är lätt att göra misstag, så även när man skriver HTML 4.01 Strict. Använd därför en tjänst hos W3C för att validera dokumentet. Validatorn söker igenom ditt dokument efter misstag och talar om för dig vad som är fel om den hittar något. Validatorn hittar du på <a href="http://validator.w3.org/">validator.w3.org</a>.</p>
+			<p>Det är lätt att göra misstag, så även när man skriver HTML5. Använd därför en tjänst hos W3C för att validera dokumentet. Validatorn söker igenom ditt dokument efter misstag och talar om för dig vad som är fel om den hittar något. Validatorn hittar du på <a href="http://validator.w3.org/">validator.w3.org</a>.</p>
 
 			<p>Ett bra dokument saknar fel (som rödmarkeras i validatorn) - och helst även varningar.</p>
 
