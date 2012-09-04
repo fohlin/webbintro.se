@@ -214,6 +214,10 @@ ul.focus{
 	padding-left:0;
 }
 
+.group{
+	background-color: #ffd;
+}
+
 
 @media screen and (max-width:770px){
 	#content, #sidebar{
