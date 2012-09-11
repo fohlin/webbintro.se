@@ -89,7 +89,9 @@
 			<li>Ange alltid typsnittsfamilj som sistaval. Detta handlar oftast om typsnitt med eller utan <a href="http://sv.wikipedia.org/wiki/Serif">seriffer</a> (<code>sans-serif</code> eller <code>serif</code>).</li>
 			<li>Om ett typsnitt har fler än ett ord i namnet så måste det anges inom citattecken, ex: <code>"Times New Roman"</code>.</li>
 			<li>För den intresserade finns väldigt utförlig information om <a href="http://dev.opera.com/articles/view/29-text-styling-with-css/">typografi på webben</a>.</li>
-			<li class="todo">TODO: Länk/notis om @font-face.</li>
+			<li>
+			    I moderna webbläsare går det dock att inkludera egna typsnitt, tack vare <a href="http://reference.sitepoint.com/css/at-fontface">@font-face</a> i CSS. På webbintro.se görs detta med hjälp av typsnitt från <a href="http://www.google.com/webfonts">Google web fonts</a>.
+			</li>
 			</ul>
 		</div>
 
@@ -99,7 +101,11 @@
 
 		<p>Kopiera all din CSS-kod till en ny, tom textfil. Spara denna fil i samma mapp som ditt HTML-dokument, med filändelsen <code>.css</code>. När du verifierat att filen är sparad kan du ta bort <code>style</code>-taggen, inklusive allt innehåll och sedan applicera den externa mallen istället. Detta gör du genom taggen <code>link</code>:</p>
 
-		<pre>&lt;link href="minmall.css" type="text/css" rel="stylesheet"&gt;</pre>
+		<pre>&lt;link href=&quot;minmall.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;&gt;</pre>
+		
+		<p>Om dokumenttypen HTML5 används, kan attributet <code>type</code> hoppas över:</p>
+		
+		<pre>&lt;link href=&quot;minmall.css&quot; rel=&quot;stylesheet&quot;&gt;</pre>
 
 		<p>Du bör byta namnet <code>minmall.css</code> till det faktiskta filnamn som du sparade din mall som. Om allt går bra så bör ditt dokument se ut precis som innan. Kontrollera annars filnamn och att HTML-dokument och CSS-fil faktiskt är sparade i samma mapp.</p>
 
