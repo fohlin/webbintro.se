@@ -62,7 +62,7 @@
 
 			<p>I samma HTML-dokument ska det även finnas kort information om hyresvärdens lediga objekt. Då det ska vara enkelt att snabbt få en bild om hur objekten skiljer sig, ska denna information presenteras i tabellform.</p>
 
-			<p>Börja med att skapa ett nytt HTML-dokument (HTML 4.01 Strict, eller XHTML 1.0 Strict), för att sedan producera tabellen som över lediga lägenheter. Nedan ser du vilka kolumner som ska finnas, tillsammans med exempeldata.</p>
+			<p>Börja med att skapa ett nytt HTML-dokument (HTML 4.01 Strict, XHTML 1.0 Strict, eller HTML5), för att sedan producera tabellen som över lediga lägenheter. Nedan ser du vilka kolumner som ska finnas, tillsammans med exempeldata.</p>
 
 			<p><img id="tabellenskahafljanderubriker:objektnummerantalrumvningytahyraochadress" src="2a-01.png" alt="Tabellen ska ha följande rubriker: Objektnummer, Antal rum, Våning, Yta, Hyra och Adress" title="" /></p>
 
@@ -76,14 +76,11 @@
 
 			<p>Du kan läsa mer om alla dessa element i en <a href="http://dev.opera.com/articles/view/19-html-tables/">genomgång i Opera Web Standards Curriculum</a>.</p>
 
-			<h3 id="steg2:ettgrundlggandeformulr">Steg 2: Ett grundläggande formulär</h3>
-			<p class="todo">
-				TODO: Nytt mottagningsskript, beskrivning.
-			</p>
 
+			<h3 id="steg2:ettgrundlggandeformulr">Steg 2: Ett grundläggande formulär</h3>
 			<p>Under tabellen ska du nu konstruera ett ansökningsformulär. Ett HTML-formulär kan vara väldigt enkelt. Låt oss studera ett exempel:</p>
 
-<pre>&lt;form action="http://homeweb.mah.se/~ctfroh/div-dsv-09/html3-receiver.php"&gt;
+<pre>&lt;form action="http://webshare.mah.se/ctfroh/da158a/formtest.php"&gt;
 	&lt;fieldset&gt;
 		&lt;legend&gt;Ansök om bostad&lt;/legend&gt;
 		&lt;input type="button" value="Ansök"&gt;
@@ -118,8 +115,6 @@
 			<p>När detta formulär skickas (man klickar på &#8220;Ansök&#8221;) bör det se ut ungefär såhär:</p>
 
 			<p><img id="first_nameifylltfrnamnlast_nameifyllt_efternamn" src="2a-03.png" alt="first_name = IFYLLT FÖRNAMN, last_name = IFYLLT_EFTERNAMN" title="" /></p>
-			
-			<p class="todo">TODO: Bild på ny mottagningssida.</p>
 
 			<p>Exakta namn är inte jätteviktiga, bara de är beskrivande. Om det inte syns någon grön ruta alls så skickas inga data via <code>POST</code>. Om inga namn/värden syns så är det problem med <code>name</code>-attributen.</p>
 
