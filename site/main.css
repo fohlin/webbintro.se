@@ -113,12 +113,34 @@ pre{
 		text-decoration: none;
 	}
 	#sidebar ul a:hover, #sidebar ul a:focus{
-		background-color: #dedee3
+		background-color: #dedee3;
+		color:#DF002C;
 	}
 	
 	#sidebar nav h3{
 		margin-top: 0.3333em;
 	}
+
+
+/* New bling for nav */
+#sidebar nav a{
+	border-right:5px solid transparent;
+	-webkit-transition: border-color 400ms ease-out;
+	   -moz-transition: border-color 400ms ease-out;
+        -ms-transition: border-color 400ms ease-out;
+         -o-transition: border-color 400ms ease-out;
+	        transition: border-color 400ms ease-out;
+}
+#sidebar nav a:hover{
+	border-color:#00EAFF;
+}
+
+
+/* Notice for new nav item */
+#sidebar nav a[href="/assignments/"]:hover{
+	border-color:#FFC500;
+}
+
 
 aside, footer{
 	font-size:0.8em;
