@@ -1,0 +1,44 @@
+body{
+    background-color:#aaaaaa;
+    color:#000000;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#container{
+    width:80%;
+    max-width:900px;
+    min-width:550px;
+    background-color:white;
+    border:1px solid black;
+    margin:0 auto;
+}
+
+
+#header {
+    background-color:#555555;
+    color:white;
+    padding:10px;
+}
+    #header h1{
+        margin:0;
+    }
+
+#nav{
+    width:21%;
+    float:left;
+    padding:0 2%;
+}
+
+#content{
+    width:70%;
+    float:right;
+    border-left:1px solid #555555;
+    padding:0 2%;
+}
+
+#footer{
+    clear:both;
+    background-color:#555555;
+    color:white;
+    text-align:center;
+}

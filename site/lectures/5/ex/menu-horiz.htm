@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="sv">
+<head>
+	<title>Horisontell meny</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<style type="text/css">
+		body{
+			font-size:20px;
+		}
+		#navigation ul{
+			list-style:none;
+			margin:0;
+			padding:0;
+		}
+			#navigation li{
+				float:left;
+				/* display:inline; */
+			}
+			
+			#navigation a{
+				padding:5px 5px 0;
+				background-color:#999;
+				color:#ffffee;
+				border:1px solid #ccc;
+				text-decoration:none;
+			}
+			/* Denna regel måste ligga ovanför den nästa (a:hover), för att
+			   inte få högre prioritet: */
+			#navigation a.current{
+				color:#000;
+				background-color:#fff;
+				border-color:#000;
+				border-bottom-color:#fff;
+			}
+			#navigation a:hover, #navigation a:focus{
+				background-color:#000;
+				color:#fff;
+			}
+	</style>
+</head>
+<body>
+	<div id="navigation">
+		<ul>
+			<li><a href="#">Länk 1</a></li>
+			<li><a href="#" class="current">Länk 2</a></li>
+			<li><a href="#">Länk 3</a></li>
+			<li><a href="#">Länk 4</a></li>
+		</ul>
+	</div>
+</body>
+</html>
