@@ -240,6 +240,10 @@ ul.focus{
 	background-color: #ffd;
 }
 
+#content .full-width{
+    max-width:153%;
+}
+
 
 @media screen and (max-width:770px){
 	#content, #sidebar{
@@ -251,6 +255,9 @@ ul.focus{
 		width: 100%;
 		float: none;
 		margin-right: 0;
+	}
+	#content .full-width{
+	    max-width:100%;
 	}
 }
 
