@@ -1,0 +1,123 @@
+body{
+    font-family:Georgia, "Times New Roman", serif;
+    font-size:0.875em; /* 16 * 0.875 = 14px */ 
+    background-color:#ccc;
+    color:#000;
+}
+
+#main{
+    background-color:#fff;
+    width:90%;
+    max-width:1200px;
+    margin:0 auto;
+    padding:20px;
+}
+
+#header{   
+}
+    #header h1{
+        text-align:center;
+    }
+    #header h1 span{
+        display:block;
+    }
+/* /header */
+
+#navigation{
+    background-color:#ddd;    
+}
+    #navigation ul{
+        list-style:none;
+        padding-left:0;
+    }
+    #navigation li{
+        float:left;
+        width:20%;
+    }
+    #navigation a{
+        background-color:#ddd;
+        color:#900;
+        display:block;
+        padding:10px 0;
+        text-align:center;
+    }
+        #navigation a:hover, #navigation a:focus{
+            background-color:#eee;
+        }
+/* /navigation */
+
+
+#content{
+    clear:left;
+    padding-top:20px;
+}
+    #primary{
+        width:60%;
+        float:left;
+    }
+    
+    #secondary{
+        width:36%;
+        float:right;
+    }
+    #content img{
+        max-width:100%;
+    }
+/* /content */
+
+
+#footer{
+    clear:both;
+    text-align:center;
+    font-variant:small-caps;
+    border-top:1px solid #000;
+    padding-top:10px;
+}
+
+
+@media print{
+    #navigation{
+        display:none;
+    }
+    #primary, #secondary{
+        float:none;
+        width:100%;
+    }
+}
+
+@media screen and (max-width:490px){
+    #primary, #secondary{
+        float:none;
+        width:100%;
+    }
+}
+@media screen and (max-width:360px){
+    #navigation li{
+        float:none;
+        width:100%;
+    }
+}
+/* Bonus */
+@media screen and (min-width:1000px){
+    body{
+        font-size:1.1875em; /* 19px */
+    }
+    #content img{
+        width:100%; /* Snyggare, i detta fall */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
