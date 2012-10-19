@@ -48,6 +48,7 @@ h2{
 header{
     width:20%;
 	float:left;
+	margin-right:2%;
 	text-align:center;
 }
 
@@ -88,7 +89,7 @@ nav{
 #content{
 	float:left;
 }
-#content, aside, footer{
+#content, aside{
     width:78%;
     float:right;
 }
