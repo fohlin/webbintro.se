@@ -1,0 +1,203 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+
+/* HTML5 block element might be new to some browsers */
+section, article, header, footer, nav, aside, hgroup{
+	display:block;
+}
+
+body{
+	font-family: "Droid Serif", Times, "Times New Roman", serif;
+	line-height:1.5;
+	color:#000;
+	min-width:550px;
+	padding:30px 0 2em 20px;
+	
+	background: #FFFFFF; /* old browsers */
+    background: -moz-linear-gradient(top, #FFFFFF 12%, #DDD 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(12%,#FFFFFF), color-stop(100%,#DDD)); /* webkit */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#DDDDDD',GradientType=0 ); /* ie */
+}
+
+a{
+	color:rgb(147, 40, 35); /* Mah:s grafiska profil */
+	text-decoration:underline;
+}
+    a:visited{
+        color:#555;
+    }
+	a:hover, a:active{
+		text-decoration:none;
+	}
+	
+h1{
+	color:#333;
+	margin:0;
+}
+
+#content h2{
+	color:#333;
+	font-size:1.75em;
+	margin:0;
+}
+
+body > header{
+	width:100px;
+	padding-right:35px;
+	float:left;
+	text-align:center;
+}
+
+nav{
+
+}
+	nav ul{
+		list-style-type:none;
+		margin:0;
+		padding:0;
+		font-size:1.2em;
+	}
+		nav li{
+			margin-bottom:2px;
+		}
+	nav a, nav a:visited{
+		color:#fff;
+		background-color:#000;
+		padding:2px;
+		text-decoration:none;
+		display:block;
+	}
+		nav a:hover, nav a:active{
+			background-color:rgb(147, 40, 35);
+		}
+		
+	#search{
+		margin-top:30px;
+		text-align:center;
+		color:#fff;
+		background-color:#000;
+	}
+		#search input[type=text]{
+			width:88%;
+		}
+
+
+#content{
+	float:left;
+}
+#content, body > aside,  body > footer{
+	width:75%;
+	max-width:700px;
+}
+
+
+	article{
+		display:block;
+		margin-bottom:3em;
+	}
+		article header a{
+			color:#444;
+			text-decoration:none;
+		}
+			article header a:hover, article header a:active{
+				text-decoration:underline;
+			}
+		article footer{
+			font-size:0.8em;
+		}
+	
+	/* Make first article stand out */
+	article:first-child{
+	    font-size:1.2em;
+	    padding:5px 10px;
+	    
+	    -moz-border-radius: 10px; /* FF1+ */
+	    -webkit-border-radius: 10px; /* Saf3+, Chrome */
+	    -khtml-border-radius: 10px; /* Konqueror */
+	    border-radius: 10px; /* Standard. IE9 */
+	    
+	    background: #eee; /* old browsers */
+        background: -moz-linear-gradient(top, #fefefe 0%, #eee 100%); /* firefox */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#eee)); /* webkit */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#eeeeee',GradientType=0 ); /* ie */
+        
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=0, Color='#999999'); /* IE6, IE7 */
+        -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=0, Color='#999999')"; /* IE8 */
+        -moz-box-shadow: 0 0 6px #999; /* FF3.5+ */
+        -webkit-box-shadow: 0 0 6px #999; /* Saf3+, Chrome */
+        box-shadow: 0 0 6px #999; /* Standard. Opera 10.5, IE9 */
+	}
+
+
+
+body > aside,  body > footer{
+	display:block;
+	clear:both;
+	padding-left:130px;
+	font-size:0.8em;
+}
+	body > aside div{
+		width:32%;
+		float:left;
+		margin-right:2%;
+	}
+		body > aside div.last{
+			margin:0;
+		}
+	.contributors ul{
+		padding-left:0;
+		list-style:none;
+	}
+	.contributors li:before{
+		content: "\272A \0020";
+		color:#222;
+	}
+	.archives ul{
+		padding-left:15px;
+	}
+
+body > footer{
+    clear:both;
+    padding-top:2em;
+    text-align:center;
+}
+
+
+@media screen and (max-width:550px), (max-device-width:480px){
+    body{
+        min-width:250px;
+        padding:5px;
+    }
+    body > header, #content, body > aside, body > footer{
+        float:none;
+        width:auto;
+        min-width:none;
+        max-width:none;
+        padding-left:0;
+        padding-right:0;
+    }
+    body > header{
+        margin-bottom:1em;
+    }
+    body > aside div{
+        float:none;
+        width:auto;
+        margin:0 0 1em;
+    }
+}
+
+@media screen and (min-width: 1180px){
+    #content, body > aside{
+        float:left;
+    }
+    body > aside{
+        clear:none;
+        padding:0;
+        margin-left:30px;
+        width:200px;
+    }
+    body > aside div{
+       float:none;
+       width:auto;
+       margin:0 0 2em;
+   }
+}
