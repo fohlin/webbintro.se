@@ -251,6 +251,16 @@ ul.focus{
     max-width:153%;
 }
 
+.l{
+    float:left;
+    margin:0 15px 15px 0;
+}
+.r{
+    float:right;
+    margin:0 0 15px 15px;
+    text-align: right;
+}
+
 
 @media screen and (max-width:770px){
 	#content, #sidebar{
@@ -267,4 +277,14 @@ ul.focus{
 	    max-width:100%;
 	}
 }
+@media screen and (max-width:420px){
+    .l, .r{
+        float:none;
+        margin:auto;
+        text-align: center;
+    }
+}
+
+
+
 
