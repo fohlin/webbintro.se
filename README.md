@@ -18,8 +18,6 @@ with `/`). This means that the site is best tested from a web server. One simple
 way to get one running, is issuing the command `python -m SimpleHTTPServer`
 (for Python 2) from the `site` directory.
 
-Note that documents include a Google Analytics snippet, which you want to remove or modify for before reuse.
-
 ## License ##
 
 All content is available under a [Creative Commons Attribution 2.5 Sweden](http://creativecommons.org/licenses/by/2.5/se/) license. In most cases, this should be equal to the [generic version](http://creativecommons.org/licenses/by/2.5/). Attribution in the form of a link to <http://webbintro.se/> is much appreciated.
