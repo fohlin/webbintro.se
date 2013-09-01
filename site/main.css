@@ -261,6 +261,12 @@ ul.focus{
     text-align: right;
 }
 
+.archived{
+    background-color:#ffe;
+    border:1px solid #ddd;
+    padding:5px;
+}
+
 
 @media screen and (max-width:770px){
 	#content, #sidebar{

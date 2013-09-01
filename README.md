@@ -2,10 +2,14 @@
 
 This project contains Swedish educational material
 for client side web development. It is created and maintained as part of the
-course [Introduction to Web Development][DA156A] at [Malmö University][Mah]. The website in this repository is published at <http://webbintro.se/>.
+course [Introduction to Web Development][DA156A] at [Malmö University][Mah]. The website in this repository is published at <http://2012.ia.webbintro.se/>.
 
 [DA156A]:	http://edu.mah.se/sv/Course/DA156A
 [Mah]: 		http://mah.se/english
+
+## Archived version ##
+
+This branch keeps the content as it was during the 2012 course.
 
 ## Development Note ##
 
