@@ -1,0 +1,216 @@
+<!doctype HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>HTML 5</title>
+		<!--[if lt IE 9]>
+		<script src="dist/html5shiv.js"></script>
+		<![endif]-->
+		<link href='http://fonts.googleapis.com/css?family=Devonshire' rel='stylesheet' type='text/css'>
+		<link href="reset.css" rel="stylesheet">
+		<link href="css3.css" rel="stylesheet">
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<h1>HTML 5 & CSS 3</h1>
+				<nav>
+					<ul>
+						<li id="chosen">Start</li>
+						<li>Länk</li>
+						<li>Länk</li>
+					</ul>
+				</nav>
+			</header>
+			<article id="content">
+				<h2 id="html">Exemepel - HTML</h2>
+				
+				<section>
+					<h3>Ny element för att skapa struktur</h3>
+					<p>Visa källa på detta dokument för se hur nya element som header/footer/section m.m. kan användas.</p>
+					<p>Ni kan läsa mer om de på <a href="http://www.w3schools.com/html/html5_semantic_elements.asp">W3Schools</a>.</p>
+				</section>
+				
+				<section>
+					<h3>Bilder & bildtexter</h3>
+					<figure>
+						<img src="starWarsI.jpg">
+						<figcaption>
+							Star Wars Episode 1
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="starWarsII.jpg">
+						<figcaption>
+							Star Wars Episode 2
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="starWarsIII.jpg">
+						<figcaption>
+							Star Wars Episode 3
+						</figcaption>
+					</figure>
+					<p>Ni kan läsa mer om figure på <a href="http://www.w3schools.com/tags/tag_figure.asp">W3Schools</a>.</p>
+				</section>
+				
+				<section>
+					<h3>Editerbart innehåll</h3>
+					<p>Min todo-lista! (ändra gärna):</p>
+					<ul contenteditable="true" id="todoList">
+						<li>Tvätta</li>
+						<li>Städa</li>
+						<li>Diska</li>
+					</ul>
+				</section>
+				
+				<section class="inputs">
+					<h3>Formulär - nya typer av input</h3>
+					<form>
+						<fieldset>
+							<legend>Typer av inputfält</legend>
+							<label>color:</label><input type="color">
+							<label>date:</label><input type="date">
+							<label>datetime-local:</label><input type="datetime-local">
+							<label>email:</label><input type="email">
+							<label>month:</label><input type="month">
+							<label>number:</label><input type="number">
+							<label>range:</label><input type="range">
+							<label>search:</label><input type="search">
+							<label>tel:</label><input type="tel">
+							<label>time:</label><input type="time">
+							<label>url:</label><input type="url">
+							<label>week:</label><input type="week">
+						</fieldset>
+					</form>
+					<p>Ni kan läsa mer på <a href="http://www.w3schools.com/html/html5_form_input_types.asp">W3Schools</a>.</p>
+				</section>
+				
+				<section class="inputs">
+					<h3>Formulär - nya attribut</h3>
+					<p>Formuläret nedan använder attributet <i>"placeholder"</i> för vad som ska stå i input-fälten innan anänvdaren skriver något - samt attributet <i>"required"</i> vilket innebär att formuläret får inte skickas vidare förrän data i input-fälten finns.</p>
+					<form action="html5.html">
+						<fieldset>
+							<legend>Typer av attribut</legend>
+							<label>placehorder:</label><input type="text" placeholder="Här kan du skriva text" required>
+							<label>Epost:</label><input type="email" placeholder="Din epost..." required>
+							<label>Ålder:</label><input type="number" placeholder="Din ålder..." required>
+							<label>URL:</label><input type="url" placeholder="En url..." required>
+							<input type="submit" value="Skicka">
+						</fieldset>
+					</form>
+					<p>Ni kan läsa mer på <a href="http://www.w3schools.com/html/html5_form_attributes.asp">W3Schools</a>.</p>
+				</section>
+				
+				<section class="inputs">
+					<h3>Autocomplete i formulär</h3>
+					<label>Autocomplete</label>
+					<input list="browsers">
+					<datalist id="browsers">
+						<option value="Internet Explorer 7">
+						<option value="Internet Explorer 8">
+						<option value="Internet Explorer 9">
+						<option value="Internet Explorer 10">
+						<option value="Chrome">
+						<option value="Opera">
+						<option value="Firefox">
+						<option value="Safari">
+					</datalist>
+					<p>Ni kan läsa mer om autocomplete och andra nya element för formulär på <a href="http://www.w3schools.com/html/html5_form_elements.asp">W3Schools</a>.</p>
+				</section>
+				
+				<section>
+					<h3>Drag and drop (kräver JavaScript)</h3>
+					<p><a href="http://html5demos.com/drag">Här finns demo</a>.</p>
+				</section>
+				
+				<section>
+					<h3>Local Storage (Javascript)</h3>
+					<p>Ersätter till stor del användandet av cookies för att spara saker på klientsidan.</p>
+					<p>Ni kan läsa om Local Storage <a href="http://diveintohtml5.info/storage.html">här</a>.</p>
+				</section>
+				
+				<section>
+					<h3>Audio-taggen</h3>
+					<audio controls>
+					  <source src="audio.mp3" type="audio/mpeg">
+					  Your browser does not support the audio tag.
+					</audio>
+					<p>Ni kan läsa mer på <a href="http://www.w3schools.com/tags/tag_audio.asp">W3Schools</a>.</p>
+				</section>
+				
+				<section>
+					<h3>Video-taggen</h3>
+					<video width="320" height="240" controls>
+					  <source src="video.mp4" type="video/mp4">
+					  Your browser does not support the video tag.
+					</video>
+				</section>
+				
+				<hr>
+				
+				<h2 id="css">CSS 3</h2>
+				
+				<section>
+					<h3>Rundade hörn</h3>
+					<div id="roundCorners">Denna box har rundade hörn!</div>
+				</section>
+				
+				<section>
+					<h3>Skuggad box</h3>
+					<div id="roundCornersShadow">Denna box har rundade hörn & skugga!</div>
+				</section>
+				
+				<section>
+					<h3>Skuggad text</h3>
+					<div id="roundCornersShadowText">Denna box har rundade hörn, skugga och text-skugga!</div>
+				</section>
+				
+				<section>
+					<h3>Text-färg genom RGBA</h3>
+					<span id="rgbaText">Här är lite text!</span>
+				</section>
+				
+				<section>
+					<h3>Annat typsnitt (från google fonts)</h3>
+					<p id="googleFont">Denna text har ett avvikande typsnitt som egentligen inte finns på datorn</p>
+				</section>
+				
+				<section>
+					<h3>Kolumner</h3>
+					<div id="columns">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a sodales lorem, ac pharetra augue. Aenean semper pretium varius. Nunc in massa nec leo tincidunt suscipit eget eget arcu. Curabitur pretium lacinia vulputate. Cras non dictum lorem. Maecenas ipsum orci, pellentesque et turpis non, scelerisque rhoncus sem. Sed sit amet metus eu sem eleifend mattis id id lacus. Suspendisse ullamcorper ipsum purus, a sodales elit tempus faucibus. Aenean sagittis nunc risus, nec mattis risus interdum non. Nunc non fringilla sem. Maecenas sed bibendum sem, eget luctus arcu. Morbi aliquet condimentum diam at cursus. Quisque eu est quis enim vestibulum iaculis. Sed et posuere diam.</div>
+				</section>
+				
+				<section>
+					<h3>Box Resize</h3>
+					<div id="boxResize">Dra nere i höger hörn!</div>
+				</section>
+				
+				<section>
+					<h3>Gradient bakgrund</h3>
+					<div id="gradient">Denna box har en gradient bakgrund!</div>
+				</section>
+				
+				<section>
+					<h3>Animationer (för muspekaren över boxen nedan)</h3>
+					<div id="animation">Animeringsbox</div>
+				</section>
+				
+				<section>
+					<h2>Förvrängning</h2>
+					<div id="screw">Förvrängd box</div>
+				</section>
+				
+			</article>
+			<aside>
+				<h2>Undermeny</h2>
+				<a href="#html">HTML 5</a>
+				<a href="#css">CSS 3</a>
+			</aside>
+			<footer>
+			
+			</footer>
+		</div>
+	</body>
+</html>
