@@ -34,7 +34,7 @@
 					<li><a href="/lectures/">Föreläsningar</a></li>
 					<li><a href="/exercises/">Laborationer</a></li>
 					<li><a href="/assignments/">Inlämningsuppgifter</a></li>
-					<li><a href="/plan.html">Planering HT 2012</a></li>
+					<li><a href="/plan.html">Planering HT 2014</a></li>
 					<li><a href="/exam/">Om tentamen</a></li>
 				</ul>
 			</nav>
@@ -67,9 +67,7 @@
 				kan områdena (div-taggarna) ges olika stilar.
 			</p>
 			<p>
-				Skapa ett HTML-dokument (4.01 Strict) och infoga fyra <code>div</code>-taggar. Ge dem identiteterna
-				<code>header</code>, <code>navigation</code>, <code>content</code> respektive <code>footer</code>.
-				Lägg dessutom lite platshållartext i varje div, så att det syns att allt fungerar som det ska.
+				Skapa ett HTML-dokument och infoga de taggar som är lämpliga för layouten på bilden ovan (<code>header, nav, section, footer</code>-taggar). Lägg lite platshållartext i varje div, så att det syns att allt fungerar som det ska.
 			</p>
 			<p>
 				Även om det <em>fungerar</em> så är det ännu inte så visuellt tilltalande. Skapa en extern
@@ -128,7 +126,7 @@
 				</thead>
 				<tbody>
 					<tr>
-						<th rowspan="2">#header</th>
+						<th rowspan="2">header</th>
 						<td>Logotyp</td>
 						<td><code>h1</code></td>
 					</tr>
@@ -137,7 +135,7 @@
 						<td><code>p</code></td>
 					</tr>
 					<tr>
-						<th rowspan="2">#navigation</th>
+						<th rowspan="2">nav</th>
 						<td>Meny med länkar</td>
 						<td><code>ul</code> <code>li</code> och <code>a</code></td>
 					</tr>
@@ -146,7 +144,7 @@
 						<td>Den HTML som ges efter godkänd validering</td>
 					</tr>
 					<tr>
-						<th rowspan="2">#content</th>
+						<th rowspan="2">section</th>
 						<td>Rubrik på innehåll</td>
 						<td><code>h2</code></td>
 					</tr>
@@ -155,7 +153,7 @@
 						<td><code>p</code> och vad annat som ter sig lämpligt</td>
 					</tr>
 					<tr>
-						<th>#footer</th>
+						<th>footer</th>
 						<td>Upphovsrättsinformation</td>
 						<td><code>p</code></td>
 					</tr>
@@ -177,15 +175,15 @@
 				möjliga inriktningar som det finns människor. Här följer några förslag:
 			</p>
 			<ul>
-				<li>Ta bort bakgrundfärg för #navigation, #content - och lägg till bakgrundfärg för #container.
-					Ändra bakgrundfärg för #header och #footer.</li>
+				<li>Ta bort bakgrundfärg för <code>nav, section</code> - och lägg till bakgrundfärg för #container.
+					Ändra bakgrundfärg för <code>header</code> och <code>footer</code>.</li>
 				<li>Välj ett snyggt typsnitt och ange en textstorlek.</li>
 				<li>Definiera hur länkar ska se ut (glöm inte <code>:visited</code> och <code>:hover</code>).</li>
 				<li>Lägg till padding för att få lite luft mellan text och layoutens kanter. (Tänk på att
 					padding påverkar totalbredden för ett element)</li>
 				<li>Ta bort listpunkterna från navigationsmenyn och gör den mer distinkt till utseendet.</li>
 				<li>Ge logotypen ett unikt utseende.</li>
-				<li>Centrera texten i #footer.</li>
+				<li>Centrera texten i <code>footer</code>.</li>
 				<li>Experimentera!</li>
 			</ul>
 			<p>
@@ -196,7 +194,7 @@
 			<h3 id="sidor">Flera sidor</h3>
 			<p>
 				Eftersom all CSS ligger i en externa stilmall kan samma utseende enkelt fås på flera sidor.
-				Kopiera ditt HTML-dokument till en ny fil. Byt ut innehållet i #content till något annat och
+				Kopiera ditt HTML-dokument till en ny fil. Byt ut innehållet i <code>section</code> till något annat och
 				länka sedan mellan dina två dokument (kanske i navigationsmenyn?).
 			</p>
 			
